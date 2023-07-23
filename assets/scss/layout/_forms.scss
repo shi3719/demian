@@ -1,0 +1,305 @@
+header {
+    padding: 24px 25px 0 25px;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+
+    >div {
+        width: 100%;
+        @include flex_between_center;
+
+        @include mobile {
+            align-items: flex-start;
+        }
+
+        @include tablet {
+            padding-bottom: 24px;
+        }
+    }
+
+    @include mobile {
+        padding: 24px 20px 12px 20px;
+    }
+
+    &.list_header {
+        background-color: $white;
+
+        @include mobile {
+            border-bottom: 1px solid $black;
+        }
+
+        @include tablet {
+            div {
+                border-bottom: 1.8px solid $black;
+            }
+        }
+    }
+}
+
+.title {
+    @include regbigP;
+    line-height: 120%;
+    font-size: 3vw;
+
+    @include mobile {
+        font-size: 30px;
+
+        &.time {
+            font-size: 32px;
+        }
+    }
+
+    p {
+        cursor: pointer;
+    }
+}
+
+.main {
+    height: 100vh;
+    @include flex_between_center;
+
+    >div {
+        width: 100%;
+
+        @include tablet {
+            width: 50%;
+            height: 100%;
+        }
+    }
+}
+
+.visual {
+    @include bgCover;
+
+    @include mobile {
+        height: 100%;
+    }
+}
+
+.menu {
+    padding: 25px;
+    display: flex;
+    align-items: flex-end;
+
+    >ul {
+        width: 100%
+    }
+
+    @include mobile {
+        position: absolute;
+        bottom: 0;
+        background-color: $white;
+    }
+}
+
+.menu_list {
+    @include flex_start_center;
+    padding: 15px 0;
+    border-bottom: 1.8px solid $black;
+    cursor: pointer;
+
+    &:first-child {
+        border-top: 1.8px solid $black;
+    }
+
+    .medBigerP {
+        width: 30%;
+    }
+
+    @include mobile {
+        padding: 7px 0;
+        border-bottom: 1px solid $black;
+
+        .medBigerP {
+            width: 64px;
+        }
+
+        &:first-child {
+            border-top: 1px solid $black;
+        }
+    }
+}
+
+//list
+.heading_wrap {
+    background-color: white;
+    padding-top: 24px;
+    width: 100%;
+
+    position: fixed;
+    z-index: 80;
+    top: 110px;
+
+    @include mobile {
+        padding-top: 12px;
+        top: 109px;
+    }
+
+    .middle {
+        @include flex_start_center;
+        padding: 0 25px;
+        padding-bottom: 5px;
+
+        .medbigP {
+            margin-right: 20px;
+        }
+
+        @include mobile {
+            padding: 0 20px;
+
+            .medbigP {
+                margin-right: 12px;
+            }
+        }
+    }
+
+    .sub {
+        white-space: nowrap;
+        overflow-x: auto;
+        padding-bottom: 15px;
+
+        @include mobile {
+            padding-bottom: 5px;
+        }
+
+        ul {
+            padding: 0 25px;
+
+            @include mobile {
+                padding: 0 20px;
+            }
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        -ms-overflow-style: none;
+        /* 인터넷 익스플로러 */
+        scrollbar-width: none;
+        /* 파이어폭스 */
+    }
+
+    .line {
+        @include tablet {
+            margin: 0 25px;
+            border-bottom: 1.8px solid $black;
+        }
+    }
+}
+
+.sub_heading {
+    @include medSmallP;
+    display: inline-block;
+    margin-right: 10vw;
+    color: $middleGray;
+    cursor: pointer;
+
+    @include mobile {
+        margin-right: 16px;
+        border-bottom: 1px solid transparent;
+    }
+
+    &:hover {
+        color: $middleDarkGray;
+    }
+
+    &.on {
+        color: $black;
+
+        @include mobile {
+            border-bottom: 1px solid $black;
+        }
+    }
+}
+
+.bottom_wrap_mobile{
+    background-color: white;
+    padding: 11px;
+    width: 100%;
+
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+
+    @include flex_between_center;
+    @include tablet{
+        display: none;
+    }
+}
+
+.bottom_wrap_web{
+    margin: 0 20px;
+
+    >div{
+        @include flex_between_center;
+        border-top: 1.8px solid $black;
+        width: 100%;
+    }
+
+    @include mobile{
+        display: none;
+    }
+}
+
+.article_wrap{
+    padding: 275px 25px 26px 25px;
+    @include mobile{
+        padding: 198px 20px 84px 20px;
+    }
+}
+
+.title_writer_wrap{
+    @include flex_between_center;
+    margin-bottom: 10px;
+
+    >p{
+        @include medSmallP;
+    }
+}
+
+.join_us{
+    width: 236px;
+    position: fixed;
+
+    bottom: 64px;
+    right: 67px;
+    z-index: 100;
+
+    @include mobile{
+        width: 86px;
+        height: 86px;
+        right: 20px;
+        bottom: 88px;
+    }
+
+    >div{
+        width: 100%;
+        padding-bottom: 100%;
+        background-position: center;
+        background-size: contain;
+        background-image: url(/assets/images/joinus_web.png);
+        background-repeat: no-repeat;
+
+        animation-name: circle;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        // animation-direction: alternate;
+        // animation-timing-function: linear;
+
+        @include mobile{
+            background-image: url(/assets/images/joinus_mobile.png);
+        }
+    }
+}
+
+@keyframes circle {
+    from{
+        transform: rotate(40deg);
+    }
+    to{
+        transform: rotate(400deg);
+    }
+}

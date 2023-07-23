@@ -1,0 +1,149 @@
+//reg
+@mixin regSmallP {
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 14px;
+    line-height: 185%;
+    font-weight: 500;
+    color: $black;
+
+    @include tablet{
+        font-size: 26px;
+    }
+}
+.regSmallP{
+    @include regSmallP;
+}
+
+@mixin regP {
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 500;
+    color: $black;
+}
+.regP{
+    @include regP;
+}
+
+@mixin regbigP {
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 18px;
+    line-height: 140%;
+    font-weight: 500;
+    color: $black;
+}
+.regbigP{
+    @include regbigP;
+}
+
+//med
+@mixin medSmallP {
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 14px;
+    line-height: 185%;
+    font-weight: 600;
+    color: $black;
+
+    @include tablet{
+        font-size: 26px;
+    }
+}
+.medSmallP{
+    @include medSmallP;
+}
+
+@mixin medbigP {
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 18px;
+    line-height: 140%;
+    font-weight: 600;
+    color: $black;
+
+    @include tablet{
+        font-size: 32px;
+    }
+}
+.medbigP{
+    @include medbigP;
+}
+
+@mixin medBigerP {
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 20px;
+    line-height: 140%;
+    font-weight: 600;
+    color: $black;
+
+    @include tablet{
+        font-size: 34px;
+    }
+}
+.medBigerP{
+    @include medBigerP;
+}
+
+//bold
+@mixin boldSmallP {
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 14px;
+    line-height: 185%;
+    font-weight: 700;
+    color: $black;
+
+    @include tablet{
+        font-size: 26px;
+    }
+}
+.boldSmallP{
+    @include boldSmallP;
+}
+
+@mixin boldP {
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 700;
+    color: $black;
+
+    @include tablet{
+        font-size: 30px;
+    }
+}
+.boldP{
+    @include boldP;
+}
+
+@mixin boldBigP {
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 18px;
+    line-height: 140%;
+    font-weight: 700;
+    color: $black;
+
+    @include tablet{
+        font-size: 32px;
+    }
+}
+.boldBigP{
+    @include boldBigP;
+}
+
+@mixin boldBigerP {
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 20px;
+    line-height: 140%;
+    font-weight: 700;
+    color: $black;
+
+    @include tablet{
+        font-size: 34px;
+    }
+}
+.boldBigerP{
+    @include boldBigerP;
+}
+
+
+.center{
+    text-align: center;
+}

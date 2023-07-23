@@ -1,0 +1,58 @@
+.left_arrow{
+    width: 52px;
+    height: 52px;
+    background-color: $black;
+    content: '';
+    mask: url(/assets/images/left_arrow.svg) no-repeat center/contain;
+    -webkit-mask: url(/assets/images/left_arrow.svg) no-repeat center/contain;
+
+    &.disabled{
+        background-color: transparent;
+    }
+}
+.right_arrow{
+    width: 52px;
+    height: 52px;
+    background-color: $black;
+    content: '';
+    mask: url(/assets/images/right_arrow.svg) no-repeat center/contain;
+    -webkit-mask: url(/assets/images/right_arrow.svg) no-repeat center/contain;
+
+    &.disabled{
+        background-color: transparent;
+    }
+}
+
+.left_arrow_big{
+    width: 120px;
+    height: 120px;
+    background-color: $black;
+    content: '';
+    mask: url(/assets/images/left_arrow_big.svg) no-repeat center/contain;
+    -webkit-mask: url(/assets/images/left_arrow_big.svg) no-repeat center/contain;
+
+    &.disabled{
+        background-color: transparent;
+    }
+}
+.right_arrow_big{
+    width: 120px;
+    height: 120px;
+    background-color: $black;
+    content: '';
+    mask: url(/assets/images/right_arrow_big.svg) no-repeat center/contain;
+    -webkit-mask: url(/assets/images/right_arrow_big.svg) no-repeat center/contain;
+
+    &.disabled{
+        background-color: transparent;
+    }
+}
+
+.top_btn{
+    width: 120px;
+    height: 120px;
+    background-color: $black;
+    content: '';
+    mask: url(/assets/images/top.svg) no-repeat center/contain;
+    -webkit-mask: url(/assets/images/top.svg) no-repeat center/contain;
+}
