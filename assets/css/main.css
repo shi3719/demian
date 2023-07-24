@@ -634,7 +634,7 @@ header.list_header {
 .article:last-child {
   margin-bottom: 0;
 }
-.article.indent {
+.article.indent .regSmallP {
   text-indent: 2rem;
 }
 

@@ -301,7 +301,9 @@ header {
     }
 
     &.indent{
-        text-indent: 2rem;
+        .regSmallP{
+            text-indent: 2rem;
+        }
     }
 }
 
