@@ -26,3 +26,28 @@ const timeCalc = () => {
 
 timeCalc();
 setInterval(timeCalc, 1000);
+
+//sub_heading btn 제어하기
+
+const subHeadingBtns = document.querySelectorAll('.sub_heading');
+subHeadingBtns.forEach((subHeadingBtn) => {
+    subHeadingBtn.addEventListener('click', () => {
+        subHeadingBtns.forEach((subHeadingBtn) => {
+            subHeadingBtn.classList.remove('on');
+        })
+        subHeadingBtn.classList.add('on');
+    })
+})
+
+
+//상단으로 바로가기 버튼
+const topBtns = document.querySelectorAll('.top_btn');
+topBtns.forEach((topBtn) => {
+    topBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        })
+    })
+})

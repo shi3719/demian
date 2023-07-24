@@ -39,3 +39,11 @@ $breakPoint: 720px;
         display: none;
     }
 }
+
+p::selection,
+li::selection,
+div::selection,
+br::selection {
+    background-color: black;
+    color: white;
+}

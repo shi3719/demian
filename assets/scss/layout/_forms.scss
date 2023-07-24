@@ -51,9 +51,7 @@ header {
         }
     }
 
-    p {
-        cursor: pointer;
-    }
+    cursor: pointer;
 }
 
 .main {
@@ -79,18 +77,35 @@ header {
 }
 
 .menu {
-    padding: 25px;
     display: flex;
     align-items: flex-end;
 
     >ul {
-        width: 100%
+        width: 100%;
+        padding: 25px;
+        background-color: $white;
     }
 
     @include mobile {
         position: absolute;
         bottom: 0;
-        background-color: $white;
+
+        overflow: hidden;
+        animation-name: toast;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+        animation-timing-function: cubic-bezier(.12,1.24,.25,.9);
+    }
+}
+
+@keyframes toast {
+    from{
+        opacity: 0;
+        height: 0;
+    }
+    to{
+        opacity: 1;
+        height: 100%;
     }
 }
 
@@ -130,7 +145,7 @@ header {
 
     position: fixed;
     z-index: 80;
-    top: 110px;
+    top: calc(48px + (3vw * 1.2));
 
     @include mobile {
         padding-top: 12px;
@@ -245,9 +260,48 @@ header {
 }
 
 .article_wrap{
-    padding: 275px 25px 26px 25px;
-    @include mobile{
-        padding: 198px 20px 84px 20px;
+    padding: 198px 20px 84px 20px;
+    @include tablet{
+        padding: 275px 25px 26px 25px;
+        ul{
+            position: relative;
+
+            &::after{
+                content: '';
+                display: block;
+                @include fix_center;
+                z-index: -1;
+
+                height: 100%;
+                border-right: 1.8px solid $black;
+            }
+        }
+    }
+}
+
+.article{
+    margin-bottom: 30px;
+    
+    @include tablet{
+        width: calc(50% - 25px);
+        margin-bottom: 10px;
+
+        >p{
+            text-align: right;
+        }
+
+        &:nth-child(2n){
+            margin-left: calc(50% + 25px);
+            text-align: left;
+        }
+    }
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+
+    &.indent{
+        text-indent: 2rem;
     }
 }
 
@@ -267,6 +321,7 @@ header {
     bottom: 64px;
     right: 67px;
     z-index: 100;
+    cursor: pointer;
 
     @include mobile{
         width: 86px;

@@ -9,6 +9,8 @@
     &.disabled{
         background-color: transparent;
     }
+    
+    cursor: pointer;
 }
 .right_arrow{
     width: 52px;
@@ -21,6 +23,8 @@
     &.disabled{
         background-color: transparent;
     }
+
+    cursor: pointer;
 }
 
 .left_arrow_big{
@@ -34,6 +38,8 @@
     &.disabled{
         background-color: transparent;
     }
+
+    cursor: pointer;
 }
 .right_arrow_big{
     width: 120px;
@@ -46,6 +52,8 @@
     &.disabled{
         background-color: transparent;
     }
+
+    cursor: pointer;
 }
 
 .top_btn{
@@ -55,4 +63,6 @@
     content: '';
     mask: url(/assets/images/top.svg) no-repeat center/contain;
     -webkit-mask: url(/assets/images/top.svg) no-repeat center/contain;
+
+    cursor: pointer;
 }
