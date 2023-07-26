@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>충돌 몽타주</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <script src="/assets/js/jquery3.6.1.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+
+    <link rel="apple-touch-icon" href="/apple_touch_icon.png">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+
+    <meta property="og:title" content="충돌 몽타주" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://collisionmontage.vercel.app/" />
+    <meta property="og:image" content="https://collisionmontage.vercel.app/assets/images/ogimage.png" />
+</head>
+
+<body>
+    <header class="list_header">
+        <div>
+            <p class="title" id="logo" onclick="location.href='/index.html'">COLLISION <br class="web_none">MONTAGE</p>
+            <p class="title" id="time">11:07:13</p>
+        </div>
+    </header>
+
+    <section class="heading_wrap">
+        <div class="middle">
+            <p class="medbigP">01</p>
+            <p class="boldP">두세계</p>
+        </div>
+        <div class="sub">
+            <ul>
+                <li class="sub_heading on">어른이 된다는 건 뭘까?</li>
+                <li class="sub_heading">나만의 세계를 만들어보자</li>
+                <li class="sub_heading">우린 영화 속에 살고있어</li>
+                <li class="sub_heading">내가 나쁜거야?</li>
+            </ul>
+        </div>
+        <div class="line"></div>
+    </section>
+
+    <section w3-include-html="/assets/data/chapter1Data.html" class="article_wrap"></section>
+
+    <section class="bottom_wrap_mobile">
+        <div class="left_arrow disabled"></div>
+        <div class="right_arrow"></div>
+    </section>
+
+    <section class="bottom_wrap_web mobile_none">
+        <div>
+            <div class="left_arrow_big disabled"></div>
+            <div class="top_btn"></div>
+            <div class="right_arrow_big"></div>
+        </div>
+    </section>
+
+    <section class="join_us">
+        <div></div>
+    </section>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="/assets/js/index.js"></script>
+    <script>
+        //enter 치환하기 
+        const changeText = () => {
+            const entertexts = document.querySelectorAll('.enter');
+
+            entertexts.forEach((entertext) => {
+                let textContent = entertext.textContent;
+
+                textContent = textContent.replace(/\r\n/ig, '<br>');
+                textContent = textContent.replace(/\\n/ig, '<br>');
+                textContent = textContent.replace(/\n/ig, '<br>');
+
+                entertext.innerHTML = textContent;
+            });
+        }
+
+        window.onload = () => {
+            changeText();
+        }
+        window.reload = () => {
+            changeText();
+        }
+
+    </script>
+</body>
+
+</html>

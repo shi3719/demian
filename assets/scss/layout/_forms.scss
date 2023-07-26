@@ -261,6 +261,14 @@ header {
 
 .article_wrap{
     padding: 198px 20px 84px 20px;
+
+    ul{
+        display: none;
+        &.on{
+            display: block;
+        }
+    }
+    
     @include tablet{
         padding: 275px 25px 26px 25px;
         ul{
@@ -316,6 +324,17 @@ header {
 
     >p{
         @include medSmallP;
+    }
+
+    .article_title{
+        width: calc(100% - 91px);
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+
+        @include mobile{
+            width: calc(100% - 62px);
+        }
     }
 }
 
