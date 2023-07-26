@@ -25,18 +25,13 @@
 </head>
 
 <body>
-    <header>
-        <div>
-            <p class="title" id="logo" onclick="location.href='/index.html'">COLLISION <br class="web_none">MONTAGE</p>
-            <p class="title" id="time">11:07:13</p>
-        </div>
-    </header>
+    <header></header>
 
     <section class="main">
         <div class="visual" style="background-image: url(/assets/images/visual1.png);"></div>
         <div class="menu">
             <ul>
-                <li class="menu_list" onclick="location.href='/chapter1.html'">
+                <li class="menu_list">
                     <p class="medBigerP">01</p>
                     <p class="boldBigP">두세계</p>
                 </li>
@@ -74,6 +69,16 @@
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="/assets/js/index.js"></script>
+
+    <script>
+        const menuLists = document.querySelectorAll('.menu_list');
+        menuLists.forEach((menuList) => {
+            menuList.addEventListener('click', () => {
+                const num = menuList.children[0].innerHTML;
+                location.href = `/chapter.html?chapter=${num}`;
+            })
+        })
+    </script>
 </body>
 
 </html>

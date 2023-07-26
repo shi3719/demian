@@ -268,7 +268,7 @@ header {
             display: block;
         }
     }
-    
+
     @include tablet{
         padding: 275px 25px 26px 25px;
         ul{
@@ -283,6 +283,17 @@ header {
                 height: 100%;
                 border-right: 1.8px solid $black;
             }
+        }
+    }
+
+    .top_btn{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 30px;
+
+        @include tablet{
+            display: none;
         }
     }
 }
