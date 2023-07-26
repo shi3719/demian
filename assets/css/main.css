@@ -34,11 +34,6 @@
   }
 }
 
-p::-moz-selection, li::-moz-selection, div::-moz-selection, br::-moz-selection {
-  background-color: black;
-  color: white;
-}
-
 p::selection,
 li::selection,
 div::selection,
@@ -628,6 +623,8 @@ header.list_header {
   }
   .article:nth-child(2n) {
     margin-left: calc(50% + 25px);
+  }
+  .article:nth-child(2n) > p {
     text-align: left;
   }
 }

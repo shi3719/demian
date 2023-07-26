@@ -292,7 +292,10 @@ header {
 
         &:nth-child(2n){
             margin-left: calc(50% + 25px);
-            text-align: left;
+
+            >p{
+                text-align: left;
+            }
         }
     }
 
