@@ -726,6 +726,13 @@ header.list_header {
 .article.indent .regSmallP {
   text-indent: 2rem;
 }
+@media (max-width: 719px) {
+  .article {
+    border-bottom: 1px solid #000000;
+    margin-bottom: 36px;
+    padding-bottom: 36px;
+  }
+}
 
 .title_writer_wrap {
   display: flex;

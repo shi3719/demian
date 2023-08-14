@@ -377,6 +377,12 @@ header {
             text-indent: 2rem;
         }
     }
+    
+    @include mobile{
+        border-bottom: 1px solid $black;
+        margin-bottom: 36px;
+        padding-bottom: 36px;
+    }
 }
 
 .title_writer_wrap{
