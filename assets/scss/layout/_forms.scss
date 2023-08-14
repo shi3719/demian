@@ -310,7 +310,7 @@ header {
         width: 96%;
         max-width: 450px;
         margin: 0 auto;
-        border: 1.8px solid $black;
+        border: 1px solid $black;
         padding: 25px;
         transform: rotate(5deg);
         @include transition02;
@@ -318,7 +318,6 @@ header {
         @include mobile{
             padding: 15px;
             transform: rotate(3deg);
-            border: 1px solid $black;
         }
     
         p:first-child{
