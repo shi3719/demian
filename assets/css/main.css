@@ -645,7 +645,7 @@ header.list_header {
   width: 96%;
   max-width: 450px;
   margin: 0 auto;
-  border: 1px solid #000000;
+  border: 1.8px solid #000000;
   padding: 25px;
   transform: rotate(5deg);
   transition: all 0.2s ease-in-out;
@@ -654,6 +654,7 @@ header.list_header {
   .summary > div {
     padding: 15px;
     transform: rotate(3deg);
+    border: 1px solid #000000;
   }
 }
 .summary > div p:first-child {
@@ -765,7 +766,7 @@ header.list_header {
 }
 @media (min-width: 720px) {
   .title_writer_wrap {
-    border-bottom: 2px solid #000000;
+    border-bottom: 1.8px solid #000000;
     margin-bottom: 15px;
   }
   .title_writer_wrap .article_title {
