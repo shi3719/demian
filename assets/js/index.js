@@ -12,7 +12,7 @@ window.addEventListener('resize', () => {
 const timeCalc = () => {
     const time = document.querySelector('#time');
 
-    const endTime = new Date("2023-09-01");
+    const endTime = new Date("2023-08-15");
     const todayTime = new Date();
     const leftTime = endTime - todayTime;
 
