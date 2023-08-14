@@ -632,6 +632,72 @@ header.list_header {
   }
 }
 
+.summary {
+  background-color: #fff;
+  padding: 40px 0 60px 0;
+}
+@media (max-width: 719px) {
+  .summary {
+    padding: 10px 0 25px 0;
+  }
+}
+.summary > div {
+  width: 96%;
+  max-width: 450px;
+  margin: 0 auto;
+  border: 1px solid #000000;
+  padding: 25px;
+  transform: rotate(5deg);
+  transition: all 0.2s ease-in-out;
+}
+@media (max-width: 719px) {
+  .summary > div {
+    padding: 15px;
+    transform: rotate(3deg);
+  }
+}
+.summary > div p:first-child {
+  font-family: "Gothic A1", sans-serif;
+  font-size: 14px;
+  line-height: 185%;
+  font-weight: 600;
+  color: #000000;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+@media (min-width: 720px) {
+  .summary > div p:first-child {
+    font-size: 26px;
+  }
+}
+@media (min-width: 720px) {
+  .summary > div p:first-child {
+    font-size: 19px;
+    margin-bottom: 22px;
+  }
+}
+.summary > div p:nth-child(2) {
+  font-family: "Gothic A1", sans-serif;
+  font-size: 14px;
+  line-height: 185%;
+  font-weight: 500;
+  color: #000000;
+  font-size: 13px;
+}
+@media (min-width: 720px) {
+  .summary > div p:nth-child(2) {
+    font-size: 26px;
+  }
+}
+@media (min-width: 720px) {
+  .summary > div p:nth-child(2) {
+    font-size: 19px;
+  }
+}
+.summary > div:hover {
+  transform: rotate(0deg);
+}
+
 .article {
   margin-bottom: 30px;
 }
@@ -639,15 +705,19 @@ header.list_header {
   .article {
     width: calc(50% - 25px);
     margin-bottom: 10px;
-  }
-  .article > p {
-    text-align: right;
-  }
-  .article:nth-child(2n) {
     margin-left: calc(50% + 25px);
   }
-  .article:nth-child(2n) > p {
+  .article > p {
     text-align: left;
+  }
+  .article:nth-child(2n) {
+    margin-left: 0;
+  }
+  .article:nth-child(2n) .title_writer_wrap > p {
+    text-align: right;
+  }
+  .article:nth-child(2n) > p {
+    text-align: right;
   }
 }
 .article:last-child {
@@ -684,6 +754,18 @@ header.list_header {
 @media (max-width: 719px) {
   .title_writer_wrap .article_title {
     width: calc(100% - 62px);
+  }
+}
+@media (min-width: 720px) {
+  .title_writer_wrap {
+    border-bottom: 2px solid #000000;
+    margin-bottom: 15px;
+  }
+  .title_writer_wrap .article_title {
+    width: 50%;
+  }
+  .title_writer_wrap .article_writer {
+    width: calc(50% - 30px);
   }
 }
 
