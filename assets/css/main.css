@@ -654,7 +654,7 @@ header.list_header {
 }
 @media (min-width: 720px) {
   .article_wrap {
-    padding: 275px 25px 26px 25px;
+    padding: calc(3vw + 188px + 35px) 25px 26px 25px;
   }
   .article_wrap ul {
     position: relative;
@@ -790,7 +790,7 @@ header.list_header {
 }
 
 .info_article {
-  padding: 169px 20px 94px 20px;
+  padding: calc(3.2vw + 175px) 20px 94px 20px;
 }
 @media (min-width: 720px) {
   .info_article {
@@ -914,7 +914,7 @@ header.list_header {
   }
 }
 .explanation_article_wrap {
-  padding: 108px 25px 25px 25px;
+  padding: calc(3vw + 62px) 25px 25px 25px;
 }
 .explanation_article_wrap .explanation_article {
   overflow: hidden;
