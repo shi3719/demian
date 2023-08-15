@@ -562,7 +562,7 @@ header {
 }
 
 .explanation_article_wrap {
-    padding: calc(3vw + 62px) 25px 25px 25px;
+    padding: calc(3vw + 62px) 25px 146px 25px;
 
     .explanation_article {
         overflow: hidden;
@@ -597,6 +597,10 @@ header {
             margin-top: 0;
         }
 
+        span{
+            font-family: 'smtgothic','helvetica', 'Gothic A1', sans-serif;
+        }
+        
         @keyframes color {
             from {
                 color: $black;
@@ -765,4 +769,14 @@ header {
             }
         }
     }
+}
+
+.bottom_wrap_web_explanation{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 50;
+    background-color: $white;
+    
 }

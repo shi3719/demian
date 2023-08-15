@@ -914,7 +914,7 @@ header.list_header {
   }
 }
 .explanation_article_wrap {
-  padding: calc(3vw + 62px) 25px 25px 25px;
+  padding: calc(3vw + 62px) 25px 146px 25px;
 }
 .explanation_article_wrap .explanation_article {
   overflow: hidden;
@@ -951,6 +951,9 @@ header.list_header {
 .explanation_article_wrap .explanation_title:first-child {
   border-top: none;
   margin-top: 0;
+}
+.explanation_article_wrap .explanation_title span {
+  font-family: "smtgothic", "helvetica", "Gothic A1", sans-serif;
 }
 @keyframes color {
   from {
@@ -1111,4 +1114,13 @@ header.list_header {
   .graph2 li div {
     border: 1px solid #000000;
   }
+}
+
+.bottom_wrap_web_explanation {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: 50;
+  background-color: #fff;
 }/*# sourceMappingURL=main.css.map */

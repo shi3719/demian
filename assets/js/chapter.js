@@ -3,6 +3,24 @@ const urlParams = new URLSearchParams(queryString);
 
 const chapterNum = urlParams.get('chapter');
 
+//페이지 이동하기
+const pageUps = document.querySelectorAll('.pageUp');
+pageUps.forEach((pageUp) => {
+    pageUp.addEventListener('click', () => {
+        const num = String(Number(chapterNum) + 1).padStart(2, "0");
+        location.href=`/chapter.html?chapter=${num}`
+    })
+})
+
+const pageDowns = document.querySelectorAll('.pageDown');
+pageDowns.forEach((pageDown) => {
+    pageDown.addEventListener('click', () => {
+        const num = String(Number(chapterNum) - 1).padStart(2, "0");
+        location.href=`/chapter.html?chapter=${num}`
+    })
+})
+
+
 //enter 치환하기
 function changeText() {
     const entertexts = document.querySelectorAll('.enter');
@@ -28,10 +46,22 @@ fetchHTML(`/assets/includes/data${chapterNum}.html`)
         const articleTitles = document.querySelectorAll('.article_title');
         articleTitles.forEach((articleTitle) => {
             const titleData = articleTitle.innerHTML;
-            if(titleData === ''){
+            if (titleData === '') {
                 articleTitle.innerHTML = '무제';
             }
         })
+
+        if(chapterNum ==='01'){
+            pageDowns.forEach((pageDown) => {
+                pageDown.style.opacity = '0';
+            })
+        }
+
+        if(chapterNum ==='08'){
+            pageUps.forEach((pageUp) => {
+                pageUp.style.opacity = '0';
+            })
+        }
     });
 
 const headingWrap = document.querySelector('.heading_wrap');
