@@ -1,6 +1,6 @@
 //reg
 @mixin regSmallP {
-    font-family: 'Gothic A1', sans-serif;
+    font-family: 'smtgothic','helvetica', 'Gothic A1', sans-serif;
     font-size: 14px;
     line-height: 185%;
     font-weight: 500;
@@ -15,7 +15,7 @@
 }
 
 @mixin regP {
-    font-family: 'Gothic A1', sans-serif;
+    font-family: 'smtgothic','helvetica', 'Gothic A1', sans-serif;
     font-size: 16px;
     line-height: 140%;
     font-weight: 500;
@@ -26,7 +26,7 @@
 }
 
 @mixin regbigP {
-    font-family: 'Gothic A1', sans-serif;
+    font-family: 'smtgothic','helvetica', 'Gothic A1', sans-serif;
     font-size: 18px;
     line-height: 140%;
     font-weight: 500;
@@ -38,10 +38,10 @@
 
 //med
 @mixin medSmallP {
-    font-family: 'Gothic A1', sans-serif;
+    font-family: 'smkgothic','helvetica', 'Gothic A1', sans-serif;
     font-size: 14px;
     line-height: 185%;
-    font-weight: 600;
+    font-weight: 500;
     color: $black;
 
     @include tablet{
@@ -53,10 +53,10 @@
 }
 
 @mixin medbigP {
-    font-family: 'Gothic A1', sans-serif;
+    font-family: 'smkgothic','helvetica', 'Gothic A1', sans-serif;
     font-size: 18px;
     line-height: 140%;
-    font-weight: 600;
+    font-weight: 500;
     color: $black;
 
     @include tablet{
@@ -68,10 +68,10 @@
 }
 
 @mixin medBigerP {
-    font-family: 'Gothic A1', sans-serif;
+    font-family: 'smkgothic','helvetica', 'Gothic A1', sans-serif;
     font-size: 20px;
     line-height: 140%;
-    font-weight: 600;
+    font-weight: 500;
     color: $black;
 
     @include tablet{
@@ -84,10 +84,10 @@
 
 //bold
 @mixin boldSmallP {
-    font-family: 'Gothic A1', sans-serif;
+    font-family: 'smkgothic','helvetica', 'Gothic A1', sans-serif;
     font-size: 14px;
     line-height: 185%;
-    font-weight: 700;
+    font-weight: 500;
     color: $black;
 
     @include tablet{
@@ -99,10 +99,10 @@
 }
 
 @mixin boldP {
-    font-family: 'Gothic A1', sans-serif;
+    font-family: 'smkgothic','helvetica', 'Gothic A1', sans-serif;
     font-size: 16px;
     line-height: 140%;
-    font-weight: 700;
+    font-weight: 500;
     color: $black;
 
     @include tablet{
@@ -114,10 +114,10 @@
 }
 
 @mixin boldBigP {
-    font-family: 'Gothic A1', sans-serif;
+    font-family: 'smkgothic','helvetica', 'Gothic A1', sans-serif;
     font-size: 18px;
     line-height: 140%;
-    font-weight: 700;
+    font-weight: 500;
     color: $black;
 
     @include tablet{
@@ -129,10 +129,10 @@
 }
 
 @mixin boldBigerP {
-    font-family: 'Gothic A1', sans-serif;
+    font-family: 'smkgothic','helvetica', 'Gothic A1', sans-serif;
     font-size: 20px;
     line-height: 140%;
-    font-weight: 700;
+    font-weight: 500;
     color: $black;
 
     @include tablet{

@@ -1,10 +1,27 @@
 @charset "UTF-8";
 @font-face {
-  font-family: "Cafe24Simplehae";
+  font-family: "smkgothic";
   font-style: normal;
   font-weight: 500;
-  src: url(/assets/fonts/Cafe24Simplehae.ttf);
-  src: url(/assets/fonts/Cafe24Simplehae.ttf) format("truetype"), url(/assets/fonts/Cafe24Simplehae.otf) format("opentype");
+  src: url(/assets/fonts/smkgothic.otf);
+  src: url(/assets/fonts/smkgothic.otf) format("opentype");
+  unicode-range: U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E, U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7A3, U+D7B0-D7FF;
+}
+@font-face {
+  font-family: "smtgothic";
+  font-style: normal;
+  font-weight: 500;
+  src: url(/assets/fonts/smtgothic.otf);
+  src: url(/assets/fonts/smtgothic.otf) format("opentype");
+  unicode-range: U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E, U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7A3, U+D7B0-D7FF;
+}
+@font-face {
+  font-family: "helvetica";
+  font-style: normal;
+  font-weight: 500;
+  src: url(/assets/fonts/Helvetica.ttc);
+  src: url(/assets/fonts/Helvetica.ttc) format("truetypecollection");
+  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
 }
 * {
   padding: 0;
@@ -12,7 +29,7 @@
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
-  font-family: "Gothic A1", sans-serif;
+  font-family: "smkgothic", "smtgothic", "helvetica", "Gothic A1", sans-serif;
   word-break: keep-all;
   word-wrap: break-word;
   box-sizing: border-box;
@@ -48,7 +65,7 @@ br::selection {
 }
 
 .regSmallP {
-  font-family: "Gothic A1", sans-serif;
+  font-family: "smtgothic", "helvetica", "Gothic A1", sans-serif;
   font-size: 14px;
   line-height: 185%;
   font-weight: 500;
@@ -61,7 +78,7 @@ br::selection {
 }
 
 .regP {
-  font-family: "Gothic A1", sans-serif;
+  font-family: "smtgothic", "helvetica", "Gothic A1", sans-serif;
   font-size: 16px;
   line-height: 140%;
   font-weight: 500;
@@ -69,7 +86,7 @@ br::selection {
 }
 
 .regbigP {
-  font-family: "Gothic A1", sans-serif;
+  font-family: "smtgothic", "helvetica", "Gothic A1", sans-serif;
   font-size: 18px;
   line-height: 140%;
   font-weight: 500;
@@ -77,10 +94,10 @@ br::selection {
 }
 
 .medSmallP {
-  font-family: "Gothic A1", sans-serif;
+  font-family: "smkgothic", "helvetica", "Gothic A1", sans-serif;
   font-size: 14px;
   line-height: 185%;
-  font-weight: 600;
+  font-weight: 500;
   color: #000000;
 }
 @media (min-width: 720px) {
@@ -90,10 +107,10 @@ br::selection {
 }
 
 .medbigP {
-  font-family: "Gothic A1", sans-serif;
+  font-family: "smkgothic", "helvetica", "Gothic A1", sans-serif;
   font-size: 18px;
   line-height: 140%;
-  font-weight: 600;
+  font-weight: 500;
   color: #000000;
 }
 @media (min-width: 720px) {
@@ -103,10 +120,10 @@ br::selection {
 }
 
 .medBigerP {
-  font-family: "Gothic A1", sans-serif;
+  font-family: "smkgothic", "helvetica", "Gothic A1", sans-serif;
   font-size: 20px;
   line-height: 140%;
-  font-weight: 600;
+  font-weight: 500;
   color: #000000;
 }
 @media (min-width: 720px) {
@@ -116,10 +133,10 @@ br::selection {
 }
 
 .boldSmallP {
-  font-family: "Gothic A1", sans-serif;
+  font-family: "smkgothic", "helvetica", "Gothic A1", sans-serif;
   font-size: 14px;
   line-height: 185%;
-  font-weight: 700;
+  font-weight: 500;
   color: #000000;
 }
 @media (min-width: 720px) {
@@ -129,10 +146,10 @@ br::selection {
 }
 
 .boldP {
-  font-family: "Gothic A1", sans-serif;
+  font-family: "smkgothic", "helvetica", "Gothic A1", sans-serif;
   font-size: 16px;
   line-height: 140%;
-  font-weight: 700;
+  font-weight: 500;
   color: #000000;
 }
 @media (min-width: 720px) {
@@ -142,10 +159,10 @@ br::selection {
 }
 
 .boldBigP {
-  font-family: "Gothic A1", sans-serif;
+  font-family: "smkgothic", "helvetica", "Gothic A1", sans-serif;
   font-size: 18px;
   line-height: 140%;
-  font-weight: 700;
+  font-weight: 500;
   color: #000000;
 }
 @media (min-width: 720px) {
@@ -155,10 +172,10 @@ br::selection {
 }
 
 .boldBigerP {
-  font-family: "Gothic A1", sans-serif;
+  font-family: "smkgothic", "helvetica", "Gothic A1", sans-serif;
   font-size: 20px;
   line-height: 140%;
-  font-weight: 700;
+  font-weight: 500;
   color: #000000;
 }
 @media (min-width: 720px) {
@@ -359,7 +376,7 @@ header.list_header {
 }
 
 .title {
-  font-family: "Gothic A1", sans-serif;
+  font-family: "smtgothic", "helvetica", "Gothic A1", sans-serif;
   font-size: 18px;
   line-height: 140%;
   font-weight: 500;
@@ -396,6 +413,7 @@ header.list_header {
 .visual {
   background-position: center;
   background-size: cover;
+  cursor: pointer;
 }
 @media (max-width: 719px) {
   .visual {
@@ -524,12 +542,23 @@ header.list_header {
     border-bottom: 1.8px solid #000000;
   }
 }
+@media (max-width: 719px) {
+  .heading_wrap.info_heading_wrap {
+    padding-top: 25px;
+  }
+  .heading_wrap.info_heading_wrap .sub {
+    padding-bottom: 10px;
+  }
+  .heading_wrap.info_heading_wrap .sub_heading {
+    border: none;
+  }
+}
 
 .sub_heading {
-  font-family: "Gothic A1", sans-serif;
+  font-family: "smkgothic", "helvetica", "Gothic A1", sans-serif;
   font-size: 14px;
   line-height: 185%;
-  font-weight: 600;
+  font-weight: 500;
   color: #000000;
   display: inline-block;
   margin-right: 10vw;
@@ -589,6 +618,28 @@ header.list_header {
 @media (max-width: 719px) {
   .bottom_wrap_web {
     display: none;
+  }
+}
+
+.text_btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.text_btn p {
+  transform: translateX(30px);
+}
+@media (max-width: 719px) {
+  .text_btn p {
+    transform: translateX(15px);
+  }
+}
+.text_btn.left p {
+  transform: translateX(-30px);
+}
+@media (max-width: 719px) {
+  .text_btn.left p {
+    transform: translateX(-15px);
   }
 }
 
@@ -657,10 +708,10 @@ header.list_header {
   }
 }
 .summary > div p:first-child {
-  font-family: "Gothic A1", sans-serif;
+  font-family: "smkgothic", "helvetica", "Gothic A1", sans-serif;
   font-size: 14px;
   line-height: 185%;
-  font-weight: 600;
+  font-weight: 500;
   color: #000000;
   font-size: 13px;
   margin-bottom: 15px;
@@ -677,7 +728,7 @@ header.list_header {
   }
 }
 .summary > div p:nth-child(2) {
-  font-family: "Gothic A1", sans-serif;
+  font-family: "smtgothic", "helvetica", "Gothic A1", sans-serif;
   font-size: 14px;
   line-height: 185%;
   font-weight: 500;
@@ -732,6 +783,36 @@ header.list_header {
     margin-bottom: 36px;
     padding-bottom: 36px;
   }
+  .article:last-child {
+    border: none;
+    padding-bottom: 0px;
+  }
+}
+
+.info_article {
+  padding: 169px 20px 94px 20px;
+}
+@media (min-width: 720px) {
+  .info_article {
+    padding: 223px 25px 26px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .info_article > p {
+    width: calc(50% - 22px);
+  }
+}
+.info_article .top_btn {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 30px;
+}
+@media (min-width: 720px) {
+  .info_article .top_btn {
+    display: none;
+  }
 }
 
 .title_writer_wrap {
@@ -741,10 +822,10 @@ header.list_header {
   margin-bottom: 10px;
 }
 .title_writer_wrap > p {
-  font-family: "Gothic A1", sans-serif;
+  font-family: "smkgothic", "helvetica", "Gothic A1", sans-serif;
   font-size: 14px;
   line-height: 185%;
-  font-weight: 600;
+  font-weight: 500;
   color: #000000;
 }
 @media (min-width: 720px) {
@@ -782,6 +863,8 @@ header.list_header {
   bottom: 64px;
   right: 67px;
   z-index: 100;
+}
+.join_us:hover {
   cursor: pointer;
 }
 @media (max-width: 719px) {
@@ -808,6 +891,19 @@ header.list_header {
     background-image: url(/assets/images/joinus_mobile.png);
   }
 }
+.join_us.info > div {
+  background-image: url(/assets/images/info_web.png);
+}
+@media (max-width: 719px) {
+  .join_us.info > div {
+    background-image: url(/assets/images/info_mobile.png);
+  }
+}
+@media (min-width: 720px) {
+  .join_us.info {
+    left: 67px;
+  }
+}
 
 @keyframes circle {
   from {
@@ -815,5 +911,204 @@ header.list_header {
   }
   to {
     transform: rotate(400deg);
+  }
+}
+.explanation_article_wrap {
+  padding: 108px 25px 25px 25px;
+}
+.explanation_article_wrap .explanation_article {
+  overflow: hidden;
+  max-height: 0;
+  transition: all 1s ease-in-out;
+  position: relative;
+}
+.explanation_article_wrap .explanation_article.on {
+  max-height: 1600px;
+}
+.explanation_article_wrap p {
+  font-family: "smtgothic", "helvetica", "Gothic A1", sans-serif;
+  font-size: 14px;
+  line-height: 185%;
+  font-weight: 500;
+  color: #000000;
+  max-width: 1100px;
+}
+@media (min-width: 720px) {
+  .explanation_article_wrap p {
+    font-size: 26px;
+  }
+}
+.explanation_article_wrap .explanation_title {
+  padding: 6px 0;
+  border-top: 1.8px solid #000000;
+  border-bottom: 1.8px solid #000000;
+  margin: 25px 0;
+  animation-name: color;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  cursor: pointer;
+}
+.explanation_article_wrap .explanation_title:first-child {
+  border-top: none;
+  margin-top: 0;
+}
+@keyframes color {
+  from {
+    color: #000000;
+  }
+  50% {
+    color: #fff;
+  }
+  to {
+    color: #000000;
+  }
+}
+@media (max-width: 719px) {
+  .explanation_article_wrap {
+    padding: 119px 20px 94px 20px;
+  }
+  .explanation_article_wrap p {
+    max-width: 90%;
+  }
+  .explanation_article_wrap .explanation_title {
+    font-size: 16px;
+    padding: 2px 0;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    margin: 14px 0;
+    max-width: 65%;
+  }
+  .explanation_article_wrap .top_btn {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 30px;
+  }
+}
+@media (max-width: 719px) and (min-width: 720px) {
+  .explanation_article_wrap .top_btn {
+    display: none;
+  }
+}
+
+.img_wrap {
+  display: flex;
+  justify-content: flex-start;
+}
+.img_wrap img {
+  width: 170px;
+  margin-left: 30px;
+}
+@media (max-width: 719px) {
+  .img_wrap {
+    flex-direction: column-reverse;
+  }
+  .img_wrap img {
+    margin: 0;
+    margin-bottom: 14px;
+  }
+}
+
+.graph1 {
+  max-width: 1100px;
+  display: flex;
+  justify-content: flex-start;
+  margin: 25px 0;
+}
+.graph1 li {
+  width: calc((100% - 160px) / 5);
+  max-width: 170px;
+  margin-right: 40px;
+}
+.graph1 li:last-child {
+  margin-right: 0;
+}
+.graph1 li div {
+  width: 100%;
+  padding-bottom: 100%;
+  border: 1.8px solid #000000;
+  border-radius: 100%;
+  position: relative;
+}
+.graph1 li div p {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+@media (max-width: 719px) {
+  .graph1 {
+    max-width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px 10px 4px 10px;
+  }
+  .graph1 li {
+    width: calc((100% - 34px) / 3);
+    margin-right: 14px;
+    margin-bottom: 10px;
+  }
+  .graph1 li:nth-child(3), .graph1 li:nth-child(5) {
+    margin-right: 0;
+  }
+  .graph1 li div {
+    border: 1px solid #000000;
+  }
+}
+
+.graph2 {
+  max-width: 1100px;
+  margin: 25px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.graph2 li {
+  width: 326px;
+}
+.graph2 li div {
+  width: 100%;
+  padding-bottom: 100%;
+  border: 1.8px solid #000000;
+  border-radius: 100%;
+  position: relative;
+}
+.graph2 li div p {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.graph2 li:nth-child(2) {
+  border-top: 1.8px solid #000000;
+}
+@media (max-width: 719px) {
+  .graph2 {
+    position: relative;
+    max-width: 90%;
+    padding-bottom: 86%;
+    margin: 14px 0;
+  }
+  .graph2 li {
+    width: 55%;
+    position: absolute;
+  }
+  .graph2 li:nth-child(1) {
+    top: 0;
+    left: 0;
+  }
+  .graph2 li:nth-child(3) {
+    margin-top: 40%;
+    top: 0;
+    right: 0;
+  }
+  .graph2 li div {
+    border: 1px solid #000000;
   }
 }/*# sourceMappingURL=main.css.map */

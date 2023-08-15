@@ -24,6 +24,14 @@ fetchHTML(`/assets/includes/data${chapterNum}.html`)
         articleWrap.innerHTML = html;
         changeText();
         goTop();
+
+        const articleTitles = document.querySelectorAll('.article_title');
+        articleTitles.forEach((articleTitle) => {
+            const titleData = articleTitle.innerHTML;
+            if(titleData === ''){
+                articleTitle.innerHTML = '무제';
+            }
+        })
     });
 
 const headingWrap = document.querySelector('.heading_wrap');
