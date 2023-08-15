@@ -265,6 +265,12 @@ header {
 
 .bottom_wrap_web {
     margin: 0 20px;
+    position: fixed;
+    width: calc(100% - 40px);
+    left: 0;
+    bottom: 0;
+    z-index: 50;
+    background-color: $white;
 
     >div {
         @include flex_between_center;
@@ -315,7 +321,7 @@ header {
     }
 
     @include tablet {
-        padding: calc((3vw + 188px) + 35px) 25px 26px 25px;
+        padding: calc((3vw + 188px) + 35px) 25px 147px 25px;
 
         ul {
             position: relative;
@@ -444,7 +450,7 @@ header {
     padding: calc(3.2vw + 175px) 20px 94px 20px;
 
     @include tablet {
-        padding: 223px 25px 26px 25px;
+        padding: 223px 25px 147px 25px;
         @include flex_between;
         align-items: flex-start;
 
@@ -505,6 +511,9 @@ header {
     bottom: 64px;
     right: 67px;
     z-index: 100;
+
+    border-radius: 100%;
+    overflow: hidden;
 
     &:hover {
         cursor: pointer;
@@ -600,7 +609,7 @@ header {
         span{
             font-family: 'smtgothic','helvetica', 'Gothic A1', sans-serif;
         }
-        
+
         @keyframes color {
             from {
                 color: $black;
@@ -769,14 +778,4 @@ header {
             }
         }
     }
-}
-
-.bottom_wrap_web_explanation{
-    position: fixed;
-    width: 100%;
-    left: 0;
-    bottom: 0;
-    z-index: 50;
-    background-color: $white;
-    
 }
