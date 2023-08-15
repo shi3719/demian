@@ -1,3 +1,9 @@
+html,
+body {
+    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
+}
+
 header {
     padding: 24px 25px 0 25px;
     width: 100%;
@@ -55,7 +61,7 @@ header {
 }
 
 .main {
-    height: 100vh;
+    height: 100%;
     @include flex_between_center;
 
     >div {
@@ -93,8 +99,6 @@ header {
         bottom: 0;
 
         overflow: hidden;
-        overflow-y: scroll;
-        -webkit-overflow-scrolling: touch;
         animation-name: toast;
         animation-duration: 2s;
         animation-iteration-count: 1;
@@ -608,8 +612,8 @@ header {
             margin-top: 0;
         }
 
-        span{
-            font-family: 'smtgothic','helvetica', 'Gothic A1', sans-serif;
+        span {
+            font-family: 'smtgothic', 'helvetica', 'Gothic A1', sans-serif;
         }
 
         @keyframes color {
@@ -648,7 +652,7 @@ header {
             left: 50%;
             transform: translateX(-50%);
             margin-top: 30px;
-    
+
             @include tablet {
                 display: none;
             }
@@ -664,9 +668,10 @@ header {
         margin-left: 30px;
     }
 
-    @include mobile{
+    @include mobile {
         flex-direction: column-reverse;
-        img{
+
+        img {
             margin: 0;
             margin-bottom: 14px;
         }
@@ -702,27 +707,27 @@ header {
         }
     }
 
-    @include mobile{
+    @include mobile {
         max-width: 90%;
         @include flex_center;
         flex-wrap: wrap;
         margin: 10px 10px 4px 10px;
 
-        li{        
+        li {
             width: calc((100% - 34px) / 3);
             margin-right: 14px;
             margin-bottom: 10px;
-            
+
             &:nth-child(3),
-            &:nth-child(5){
+            &:nth-child(5) {
                 margin-right: 0;
             }
 
-            div{
+            div {
                 border: 1px solid $black;
             }
         }
-        
+
     }
 }
 
@@ -754,28 +759,28 @@ header {
         }
     }
 
-    @include mobile{
+    @include mobile {
         position: relative;
         max-width: 90%;
         padding-bottom: 86%;
         margin: 14px 0;
 
-        li{
+        li {
             width: 55%;
             position: absolute;
 
-            &:nth-child(1){
+            &:nth-child(1) {
                 top: 0;
                 left: 0;
             }
 
-            &:nth-child(3){
+            &:nth-child(3) {
                 margin-top: 40%;
                 top: 0;
                 right: 0;
             }
 
-            div{
+            div {
                 border: 1px solid $black;
             }
         }
