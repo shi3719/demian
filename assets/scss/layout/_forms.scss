@@ -84,6 +84,22 @@ header {
     cursor: pointer;
 }
 
+.poster{
+    background-image: url(/assets/images/web_poster.png);
+
+    background-size: cover;
+    background-position: center bottom;
+
+    @include mobile {
+        width: 100%;
+        height: calc(100% - 60px);
+        background-image: url(/assets/images/mobile_poster.png);
+        position: absolute;
+        top: 0;
+    }
+    
+}
+
 .menu {
     display: flex;
     align-items: flex-end;
