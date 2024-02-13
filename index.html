@@ -29,68 +29,34 @@
     <header></header>
 
     <section class="main">
-        <div class="visual" onclick="location.href='/introduction.html'"></div>
-        <div class="menu">
-            <ul>
+        <div class="visual"></div>
+        <div class="menu v2">
+            <ul class="v2_menu_wrap">
                 <li class="menu_list">
-                    <p class="medBigerP">01</p>
-                    <p class="boldBigP">두세계</p>
+                    <p class="boldBigP" onclick="location.href='/info.html'">전시설명</p>
+                </li>
+                <li class="menu_list" onclick="location.href='/pieces.html?piece=01'">
+                    <p class="boldBigP">작품목록</p>
                 </li>
                 <li class="menu_list">
-                    <p class="medBigerP">02</p>
-                    <p class="boldBigP">카인</p>
+                    <p class="boldBigP" onclick="window.open('https://www.tumblbug.com/collisonmontage')">후원하기</p>
                 </li>
-                <li class="menu_list">
-                    <p class="medBigerP">03</p>
-                    <p class="boldBigP">예수 옆에 매달린 도둑</p>
-                </li>
-                <li class="menu_list">
-                    <p class="medBigerP">04</p>
-                    <p class="boldBigP">베아트리체</p>
-                </li>
-                <li class="menu_list">
-                    <p class="medBigerP">05</p>
-                    <p class="boldBigP">새는 알에서 나오려고 투쟁한다</p>
-                </li>
-                <li class="menu_list">
-                    <p class="medBigerP">06</p>
-                    <p class="boldBigP">야곱의 싸움</p>
-                </li>
-                <li class="menu_list">
-                    <p class="medBigerP">07</p>
-                    <p class="boldBigP">에바부인</p>
-                </li>
-                <li class="menu_list">
-                    <p class="medBigerP">08</p>
-                    <p class="boldBigP">종말의 시작</p>
+                <li class="web_none arrow_wrap">
+                    <div class="arrow"></div>
                 </li>
             </ul>
         </div>  
-    </section>
-
-    <section class="join_us info" onclick="location.href='/explanation.html'">
-        <div></div>
     </section>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="/assets/js/index.js"></script>
 
     <script>
-        const menuLists = document.querySelectorAll('.menu_list');
-        menuLists.forEach((menuList) => {
-            menuList.addEventListener('click', () => {
-                const num = menuList.children[0].innerHTML;
-                location.href = `/chapter.html?chapter=${num}`;
-            })
+        const arrowWrap = document.querySelector('.arrow_wrap');
+        const v2_menu_wrap = document.querySelector('.v2_menu_wrap');
+        arrowWrap.addEventListener('click', () => {
+            v2_menu_wrap.classList.toggle('on');
         })
-
-        const visual = document.querySelector('.visual');
-        const randomVisual = () => {
-            const num = Math.floor(Math.random() * 10);
-            visual.style.backgroundImage = `url(/assets/images/bg/img${num}.png)`;
-        }
-
-        randomVisual();
     </script>
 </body>
 

@@ -9,35 +9,35 @@ window.addEventListener('resize', () => {
 })
 
 //남은시간 표시하기
-const timeCalc = () => {
-    const time = document.querySelector('#time');
+// const timeCalc = () => {
+//     const time = document.querySelector('#time');
 
-    // 현재 시스템 시간을 UTC 시간으로 가져옴
-    const todayTimeUTC = new Date().getTime();
-    // UTC 시간을 한국 시간으로 변환
-    const koreaTimeOffset = 9 * 60 * 60 * 1000; // 한국은 UTC+9
-    const todayTimeKorea = new Date(todayTimeUTC + koreaTimeOffset);
+//     // 현재 시스템 시간을 UTC 시간으로 가져옴
+//     const todayTimeUTC = new Date().getTime();
+//     // UTC 시간을 한국 시간으로 변환
+//     const koreaTimeOffset = 9 * 60 * 60 * 1000; // 한국은 UTC+9
+//     const todayTimeKorea = new Date(todayTimeUTC + koreaTimeOffset);
 
-    const endTime = new Date("2023-09-10T00:00:00+09:00");
-    const endTimeKorea = new Date(endTime.getTime() + koreaTimeOffset);
+//     const endTime = new Date("2023-09-10T00:00:00+09:00");
+//     const endTimeKorea = new Date(endTime.getTime() + koreaTimeOffset);
 
-    const leftTime = endTimeKorea - todayTimeKorea;
+//     const leftTime = endTimeKorea - todayTimeKorea;
 
-    const leftDay = String(Math.floor(leftTime / (1000 * 60 * 60 * 24))).padStart(2, "0");
-    const leftHour = String(Math.floor((leftTime / (1000 * 60 * 60)) % 24)).padStart(2, "0");
-    const leftMin = String(Math.floor((leftTime / (1000 * 60)) % 60)).padStart(2, "0");
-    const leftSec = String(Math.floor((leftTime / 1000) % 60)).padStart(2, "0");
+//     const leftDay = String(Math.floor(leftTime / (1000 * 60 * 60 * 24))).padStart(2, "0");
+//     const leftHour = String(Math.floor((leftTime / (1000 * 60 * 60)) % 24)).padStart(2, "0");
+//     const leftMin = String(Math.floor((leftTime / (1000 * 60)) % 60)).padStart(2, "0");
+//     const leftSec = String(Math.floor((leftTime / 1000) % 60)).padStart(2, "0");
 
-    if(leftDay <= 0){
-        if(leftHour <= 0 && leftMin <= 0){
-            time.innerHTML = `CLOSED`
-        }else{
-            time.innerHTML = `${leftHour}:${leftMin}:${leftSec}`
-        }
-    }else{
-        time.innerHTML = `${leftDay}:${leftHour}:${leftMin}`
-    }
-}
+//     if(leftDay <= 0){
+//         if(leftHour <= 0 && leftMin <= 0){
+//             time.innerHTML = `CLOSED`
+//         }else{
+//             time.innerHTML = `${leftHour}:${leftMin}:${leftSec}`
+//         }
+//     }else{
+//         time.innerHTML = `${leftDay}:${leftHour}:${leftMin}`
+//     }
+// }
 
 //html 넣어주기
 function fetchHTML(url) {
@@ -53,8 +53,8 @@ fetchHTML('/assets/includes/header.html')
     .then((html) => {
         header.innerHTML = html;
 
-        timeCalc();
-        setInterval(timeCalc, 1000);
+        // timeCalc();
+        // setInterval(timeCalc, 1000);
     });
 
 //상단으로 바로가기 버튼

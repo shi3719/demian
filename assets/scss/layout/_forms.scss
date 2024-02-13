@@ -50,7 +50,7 @@ header {
     font-size: 3vw;
 
     @include mobile {
-        font-size: 30px;
+        font-size: 26px;
 
         &.time {
             font-size: 32px;
@@ -146,6 +146,50 @@ header {
     }
 }
 
+.menu.v2{
+    .menu_list{
+        .boldBigP{
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+@include mobile {
+    .menu .v2_menu_wrap{
+        padding: 0 20px;
+
+        .arrow_wrap{
+            height: 70px;
+            @include flex_center;
+            >div{
+                @include transition04;
+            }
+        }
+
+        .menu_list{
+            height: 0;
+            padding: 0;
+            opacity: 0;
+            overflow: hidden;
+            @include transition04;
+        }
+
+        &.on{
+            .menu_list{
+                height: 41px;
+                overflow: hidden;
+                opacity: 1;
+            }
+            .arrow_wrap{
+                >div{
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+}
+
 //list
 .heading_wrap {
     background-color: white;
@@ -158,7 +202,7 @@ header {
 
     @include mobile {
         padding-top: 12px;
-        top: 109px;
+        top: 99px;
     }
 
     .middle {
@@ -226,6 +270,27 @@ header {
             }
         }
     }
+
+    &.info_heading_wrap.v2{
+        .sub{
+            padding-bottom: 20px;
+            ul{
+                @include flex_between_center;
+
+                .sub_heading{
+                    @include boldP;
+                    margin: 0;
+                }
+            }
+        }
+        @include mobile {
+            padding-top: 10px;
+
+            .sub{
+                padding-bottom: 10px;
+            }
+        }
+    }
 }
 
 .sub_heading {
@@ -250,6 +315,59 @@ header {
         @include mobile {
             border-bottom: 1px solid $black;
         }
+    }
+}
+
+.third{
+    padding: 5px 0;
+    margin: 0 25px;
+    border-bottom: 1.8px solid $black;
+
+    >ul{
+        @include flex_between_center;
+    }
+
+    @include mobile {
+        padding: 0 0 5px 0;
+        margin: 0;
+        border-bottom: none;
+        overflow: auto;
+
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+
+        &::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera*/
+        }
+
+        >ul{
+            width: 625px;
+            li{
+                margin-right: 20px;
+                white-space: nowrap;
+
+                &:first-child{
+                    margin-left: 20px;
+                }
+
+                &.on{
+                    border-bottom: 1px solid #000000;
+                }
+            }
+        }
+    }
+}
+
+.third_heading{
+    @include boldSmallP;
+    color: $middleGray;
+    cursor: pointer;
+
+    &:hover {
+        color: $middleDarkGray;
+    }
+    &.on {
+        color: $black;
     }
 }
 
@@ -287,10 +405,15 @@ header {
     @include mobile {
         display: none;
     }
+
+    &.bottom{
+        position: unset;
+    }
 }
 
 .text_btn {
     @include flex_between_center;
+    cursor: pointer;
 
     p {
         transform: translateX(30px);
@@ -311,6 +434,95 @@ header {
             p {
                 transform: translateX(-15px);
             }
+        }
+    }
+}
+
+.piece_wrap{
+    padding: 197px 20px 64px 20px;
+    .title_writer_wrap .article_title{
+        width: 100%;
+    }
+
+    @include tablet {
+        padding: calc((3vw + 168px) + 35px) 25px 64px 25px;
+
+        ul {
+            @include flex_between;
+            flex-wrap: wrap;
+
+            li{
+                width: calc(50% - 40px);
+            }
+        }
+    }
+
+    @include mobile {
+        padding: 175px 0 64px 0;
+
+        ul {
+            @include flex_start;
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+
+            li:first-child{
+                margin: 10px 20px;
+            }
+
+            .article_title{
+                margin-bottom: 20px;
+            }
+
+            .regSmallP{
+                color: #444444;
+            }
+        }
+
+        .top_btn{
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+.piece_wrap .size_long{
+    @include mobile {
+        .article_title{
+            margin-bottom: 50px;
+        }
+
+        .piece{
+            .info_title{
+                bottom: -89px;
+            }
+        }
+    }
+}
+
+.piece{
+    .info_title{
+        @include regSmallP;
+        margin-bottom: 17px;
+    }
+
+    img{
+        width: 100%;
+    }
+
+    @include mobile {
+        @include flex_start;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        position: relative;
+
+        .info_title{
+            width: 100%;
+            padding: 0 20px;
+            margin-bottom: 0;
+            position: absolute;
+            bottom: -62px;
+            text-align: right;
         }
     }
 }
@@ -402,6 +614,17 @@ header {
             transform: rotate(0deg);
         }
     }
+
+    &.norotate{
+        >div{
+            max-width: 370px;
+            transform: rotate(0deg);
+            p{
+                text-align: center;
+                margin-bottom: 0;
+            }
+        }
+    }
 }
 
 .article {
@@ -455,6 +678,30 @@ header {
 .info_article {
     padding: calc(3.2vw + 175px) 20px 94px 20px;
 
+    &.v2{
+        padding: calc(3.2vw + 175px) 20px 30px 20px;
+
+        .article_title{
+            @include boldP;
+            display: block;
+            width: 100%;
+
+            @include tablet {
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+                border-bottom: 1.8px solid #000000;
+            }
+        }
+
+        .top_btn{
+            display: inline-block;
+        }
+
+        @include mobile {
+            padding: 144px 20px 30px 20px;    
+        }
+    }
+
     @include tablet {
         padding: 223px 25px 147px 25px;
         @include flex_between;
@@ -473,6 +720,12 @@ header {
 
         @include tablet {
             display: none;
+        }
+
+        &.web_visible{
+            @include tablet {
+                display: inline-block;
+            }
         }
     }
 }
